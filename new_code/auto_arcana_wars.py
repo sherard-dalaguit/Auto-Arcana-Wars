@@ -1,4 +1,6 @@
 from pathlib import Path
+from typing import List
+
 from maxxer_bot import MaxxerBot
 from ordering_bot import HeadOnBot
 from your_bot import YourBot
@@ -13,11 +15,11 @@ N_WINS = 3
 
 BOT_MAPPING = {
     "random": RandomBot,
-    "warrior_maxxer": partial(MaxxerBot, character_to_max = "warrior"),
-    "mage_maxxer": partial(MaxxerBot, character_to_max = "mage"),
-    "ninja_maxxer": partial(MaxxerBot, character_to_max = "ninja"),
+    "warrior_maxxer": partial(MaxxerBot, character_to_max="warrior"),
+    "mage_maxxer": partial(MaxxerBot, character_to_max="mage"),
+    "ninja_maxxer": partial(MaxxerBot, character_to_max="ninja"),
     "head_on": HeadOnBot,
-    #"your_bot": YourBot, # uncomment when implemented
+    #  "your_bot": YourBot, # uncomment when implemented
 }
 
 DEFAULT_STARTING_ELO = 1800
@@ -25,11 +27,21 @@ DEFAULT_STARTING_ELO = 1800
 current_elo = {bot: DEFAULT_STARTING_ELO for bot in BOT_MAPPING}
 
 
-def calculate_elo(your_elo: int, opponent_elo: int, 
-                         is_your_win: bool) -> list[int, int]:
-    # implement here
-    return [your_elo, opponent_elo]
-    
+def calculate_elo(your_elo: int, opponent_elo: int, is_your_win: bool) -> list[int]:
+    k = 32
+    s = 400
+    your_expected_score = 1 / (1 + 10 ** ((opponent_elo - your_elo) / s))
+
+    if is_your_win:
+        your_elo += k * (1 - your_expected_score)
+        opponent_elo -= k * (1 - your_expected_score)
+    else:
+        your_elo -= k * your_expected_score
+        opponent_elo += k * your_expected_score
+
+    return [int(your_elo), int(opponent_elo)]
+
+
 def play_ranked(your_algo: str, opponent_algos: list[str], n_matches: int, 
                 sample_match_dir: Path) -> None:
     """Play the ranked mode of the game, battling other bots with elo at the stake.
@@ -42,7 +54,7 @@ def play_ranked(your_algo: str, opponent_algos: list[str], n_matches: int,
     """
     for opponent_algo in opponent_algos:
         
-        if opponent_algo == your_algo: # add prefix to prevent potential overlap
+        if opponent_algo == your_algo:  # add prefix to prevent potential overlap
             opponent_algo = f"opponent__{opponent_algo}"
             BOT_MAPPING[opponent_algo] = BOT_MAPPING[your_algo]
             current_elo[opponent_algo] = current_elo[your_algo]
@@ -51,10 +63,10 @@ def play_ranked(your_algo: str, opponent_algos: list[str], n_matches: int,
         n_match_wins = 0
         starting_elo = current_elo[your_algo]
         for match_idx in range(1, n_matches + 1):
-            is_your_turn_first = rng_engine.rng(probability = 50)
+            is_your_turn_first = rng_engine.rng(probability=50)
             your_round_wins, opponent_round_wins = 0, 0
             your_assignments = sample_match_dir / f"match_{match_idx}" / "your_assignments"
-            opponent_assignments =  sample_match_dir / f"match_{match_idx}" / "opponent_assignments"
+            opponent_assignments = sample_match_dir / f"match_{match_idx}" / "opponent_assignments"
             
             your_bot = BOT_MAPPING[your_algo]()
             opponent_bot = BOT_MAPPING[opponent_algo]()
@@ -68,10 +80,10 @@ def play_ranked(your_algo: str, opponent_algos: list[str], n_matches: int,
                 opponent_bot.write_assignment(opponent_assignment)
                 
                 output = play_round(
-                    your_assignment = your_assignments / f"{round}.json",
-                    opponent_assignment = opponent_assignments / f"{round}.json",
-                    is_your_turn_first = is_your_turn_first,
-                    rng_engine = rng_engine
+                    your_assignment=your_assignments / f"{round}.json",
+                    opponent_assignment=opponent_assignments / f"{round}.json",
+                    is_your_turn_first=is_your_turn_first,
+                    rng_engine=rng_engine
                 )
                 if len(output) == 3:
                     is_round_your_win, _, (your_team, opponent_team) = output
@@ -96,9 +108,9 @@ def play_ranked(your_algo: str, opponent_algos: list[str], n_matches: int,
                 if is_match_over:
                     n_match_wins += 1 if is_round_your_win else 0
                     your_elo, opponent_elo = calculate_elo(
-                        your_elo = current_elo[your_algo], 
-                        opponent_elo = current_elo[opponent_algo], 
-                        is_your_win= is_round_your_win)
+                        your_elo=current_elo[your_algo],
+                        opponent_elo=current_elo[opponent_algo],
+                        is_your_win=is_round_your_win)
                     current_elo[your_algo] = your_elo
                     current_elo[opponent_algo] = opponent_elo
                     break
@@ -108,10 +120,8 @@ def play_ranked(your_algo: str, opponent_algos: list[str], n_matches: int,
         
         print((f"{your_algo} won {n_match_wins/n_matches * 100:.1f}% ({n_match_wins}/{n_matches})"
                f" of the matches against {opponent_algo}, ending with {current_elo[your_algo]}"
-                f"({'+' if current_elo[your_algo] >= starting_elo else '-'}"
-                f"{abs(current_elo[your_algo] - starting_elo)}) elo."))
-
-        
+               f"({'+' if current_elo[your_algo] >= starting_elo else '-'}"
+               f"{abs(current_elo[your_algo] - starting_elo)}) elo."))
 
 
 if __name__ == "__main__":
@@ -121,12 +131,12 @@ if __name__ == "__main__":
     parser.add_argument("--your_bot", type=str, default="your_bot",
                         help="The bot to benchmark against the opponents")
     parser.add_argument("--opponent_bots", nargs="+", 
-                        help= ("The opponents to benchmark against. "
-                               "If left empty, will benchmark against "
-                               "every bot besides your own"), 
+                        help=("The opponents to benchmark against. "
+                              "If left empty, will benchmark against "
+                              "every bot besides your own"),
                         default=None)
     parser.add_argument("--n_matches", type=int, default=25,
-                        help="The number of matches to play agaisnt each bot")
+                        help="The number of matches to play against each bot")
     parser.add_argument("--sample_match_dir", type=str, default="./samples",
                         help="The directory of the same match team data")
     args = parser.parse_args()
