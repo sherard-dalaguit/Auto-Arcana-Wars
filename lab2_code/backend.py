@@ -104,7 +104,7 @@ def play_turn(your_character: BaseCharacter,
 def play_round(your_assignment: Path, 
                opponent_assignment: Path,
                is_your_turn_first: bool, 
-               rng_engine: RngEngine) -> tuple[bool, list[str], tuple[list[BaseCharacter]]]:
+               rng_engine: RngEngine) -> tuple[bool, list[str], tuple[list[BaseCharacter], list[BaseCharacter]]]:
     """Play the **round** out under the game engine.
 
     Arguments:
@@ -153,7 +153,7 @@ def play_round(your_assignment: Path,
             
         is_your_turn = not is_your_turn
     
-    return your_char_idx < opponent_char_idx, play_by_play_description
+    return your_char_idx < opponent_char_idx, play_by_play_description, (your_team, opponent_team)
         
 
 def play_match(your_assignments: Path, 
