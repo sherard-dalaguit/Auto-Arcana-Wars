@@ -6,6 +6,7 @@ N_ROUNDS = 5
 N_WINS = 3
 DASHES = "-" * 20
 
+
 def pretty_format_teams(your_team: list[BaseCharacter], 
                         opponent_team: list[BaseCharacter]) -> str:
     """Format the currently standing teams for printing
@@ -26,7 +27,8 @@ def calculate_damage_taken(damage: Damage, character_stats: Stats) -> Stats:
     hp_lost = 0
     hp_lost += (damage.physical - damage.physical * character_stats.armor / 100)
     hp_lost += (damage.magic - damage.magic * character_stats.magic_resistance / 100)
-    return Stats(current_hp = - hp_lost)
+    return Stats(current_hp=-hp_lost)
+
 
 def calculate_miss_chance(damage: Damage, character_stats: Stats) -> float:
     if damage.magic > damage.physical:
@@ -34,6 +36,7 @@ def calculate_miss_chance(damage: Damage, character_stats: Stats) -> float:
     else:
         miss_chance = character_stats.armor / 10
     return miss_chance
+
 
 def play_turn(your_character: BaseCharacter, 
               opponent_character: BaseCharacter, 
@@ -48,14 +51,14 @@ def play_turn(your_character: BaseCharacter,
     Arguments:
         your_character -- your character in the combat
         opponent_character -- the opponent's character
-        is_your_move -- whether or not it is your move or not
+        is_your_move -- whether it is your move or not
         rng_engine -- the rng system handling the randomness in the game
 
     Returns:
         the description of what happened in the move
     """
     if any([char.effective_stats.current_hp <= 0 
-                for char in [your_character, opponent_character]]):
+            for char in [your_character, opponent_character]]):
         raise ValueError("One of the characters is already dead")
                 
     attacking_char = your_character if is_your_turn else opponent_character
@@ -64,19 +67,19 @@ def play_turn(your_character: BaseCharacter,
     defending_player = "Opponent's" if is_your_turn else "Your"
     
     special_chance = attacking_char.effective_stats.special_trigger_chance
-    is_attack_special = rng_engine.rng(probability= special_chance)
+    is_attack_special = rng_engine.rng(probability=special_chance)
     attack = (attacking_char.basic_attack if not is_attack_special 
               else attacking_char.special_attack)
         
     if attack.stat_updates_to_self is not None:
         attacking_char.effective_stats = \
             attacking_char.effective_stats.add_stat_changes(attack.stat_updates_to_self)
-        extra_description =  ""
+        extra_description = ""
     
     else:
         miss_chance = calculate_miss_chance(damage=attack.damage, 
                                             character_stats=defending_char.effective_stats)
-        is_damage_missed = rng_engine.rng(probability= miss_chance)
+        is_damage_missed = rng_engine.rng(probability=miss_chance)
         if is_damage_missed:
             extra_description = f"It missed {defending_player} {defending_char.name}."
         else:
@@ -85,8 +88,15 @@ def play_turn(your_character: BaseCharacter,
             defending_char.effective_stats = \
                 defending_char.effective_stats.add_stat_changes(hp_update)
             extra_description = f"{defending_player} {defending_char.name} lost {-hp_update.current_hp:.3f} HP. "
+
+            total_damage = attack.damage.physical + attack.damage.magic
+            attacking_char.damage_stats.damage_dealt += total_damage
+            defending_char.damage_stats.damage_taken += total_damage
+            defending_char.damage_stats.damage_mitigated += (total_damage - abs(hp_update.current_hp))
+
             if defending_char.effective_stats.current_hp == 0:
                 extra_description += f"It fainted."
+                attacking_char.damage_stats.kills += 1
             
     return f"{attacking_player} {attack.description} {extra_description}"
 
@@ -94,7 +104,7 @@ def play_turn(your_character: BaseCharacter,
 def play_round(your_assignment: Path, 
                opponent_assignment: Path,
                is_your_turn_first: bool, 
-               rng_engine: RngEngine) -> tuple[bool, list[str]]:
+               rng_engine: RngEngine) -> tuple[bool, list[str], tuple[list[BaseCharacter]]]:
     """Play the **round** out under the game engine.
 
     Arguments:
@@ -143,10 +153,8 @@ def play_round(your_assignment: Path,
             
         is_your_turn = not is_your_turn
     
-    return (your_char_idx < opponent_char_idx, play_by_play_description)
+    return your_char_idx < opponent_char_idx, play_by_play_description
         
-        
-    
 
 def play_match(your_assignments: Path, 
                opponent_assignments: Path,
@@ -164,16 +172,16 @@ def play_match(your_assignments: Path,
             - the turn-by-turn breakdown of what happened throughout
     """
     
-    is_your_turn_first = rng_engine.rng(probability= 50)
+    is_your_turn_first = rng_engine.rng(probability=50)
     your_wins, opponent_wins = 0, 0
     play_by_play_description = []
     for round in range(1, N_ROUNDS + 1):        
         play_by_play_description.append(f"\n{DASHES} Round {round}. {DASHES}")
         is_round_your_win, round_description = play_round(
-            your_assignment = your_assignments / f"{round}.json",
-            opponent_assignment = opponent_assignments / f"{round}.json",
-            is_your_turn_first = is_your_turn_first,
-            rng_engine = rng_engine
+            your_assignment=your_assignments / f"{round}.json",
+            opponent_assignment=opponent_assignments / f"{round}.json",
+            is_your_turn_first=is_your_turn_first,
+            rng_engine=rng_engine
         )
         round_description = [f"\t{turn_description}" for turn_description in round_description]
         play_by_play_description.extend(round_description)
@@ -194,7 +202,7 @@ def play_match(your_assignments: Path,
                 f"\n{DASHES} {round_outcome} {your_wins}-{opponent_wins}. {DASHES}")
             break
         
-    return (your_wins > opponent_wins, play_by_play_description)
+    return your_wins > opponent_wins, play_by_play_description
     
     
 if __name__ == "__main__":

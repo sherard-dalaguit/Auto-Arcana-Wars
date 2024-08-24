@@ -2,8 +2,10 @@ from typing import NamedTuple
 import abc
 import math
 import numpy as np
+from dataclasses import dataclass
 
 N_ITEMS = 3
+
 
 class RngEngine:
     def __init__(self, seed: int = 56) -> None:
@@ -13,7 +15,7 @@ class RngEngine:
                 It is already created where needed
 
         Keyword Arguments:
-            seed -- the psuedo rng seed to use (default: {56})
+            seed -- the pseudo rng seed to use (default: {56})
         """
         self._rand = np.random.default_rng(seed=seed)
         
@@ -32,6 +34,7 @@ class RngEngine:
                 True if it was, False otherwise
         """
         return self._rand.random() < (probability / 100)
+
 
 class Stats(NamedTuple):
     current_hp: float = 0
@@ -54,7 +57,7 @@ class Stats(NamedTuple):
                 ["special_trigger_chance", [0, 100]]]:
             new_stat = getattr(self, stat_name) + getattr(changes, stat_name)
             if max_val == "total_hp":
-                max_val = new_stats["total_hp"] # to cap current hp to new max hp
+                max_val = new_stats["total_hp"]  # to cap current hp to new max hp
             normalized_stat = min(max_val, max(min_val, new_stat))
             new_stats[stat_name] = normalized_stat
         return Stats(**new_stats)
@@ -72,16 +75,25 @@ class Stats(NamedTuple):
             ]
         ]
         return "\n".join(formatted_stats)
-         
+
+
 class Damage(NamedTuple):
     physical: float = 0
     magic: float = 0
+
 
 class Attack(NamedTuple):
     damage: Damage = None
     stat_updates_to_self: Stats = None
     description: str = None
-    
+
+
+@dataclass
+class DamageStats:
+    damage_dealt: float = 0.0
+    damage_taken: float = 0.0
+    damage_mitigated: float = 0.0
+    kills: int = 0
 
 
 class BaseItem(abc.ABC):
@@ -104,8 +116,7 @@ class BaseItem(abc.ABC):
     @abc.abstractmethod
     def calculate_effective_stats(self, character_stats: Stats) -> Stats:
         pass
-    
-    
+
     def __eq__(self, value: object) -> bool:
         if not isinstance(value, BaseItem):
             return False
@@ -133,6 +144,7 @@ class BaseCharacter(abc.ABC):
         self.added_item_stats = Stats()
         self.effective_stats = self.base_stats
         self.items = []
+        self.damage_stats = DamageStats()
         
     @property
     @abc.abstractmethod
@@ -141,7 +153,7 @@ class BaseCharacter(abc.ABC):
     
     @property
     @abc.abstractmethod
-    def special_attack_name() -> str:
+    def special_attack_name(self) -> str:
         pass
     
     def add_item(self, item: BaseItem) -> None:
@@ -172,10 +184,10 @@ class BaseCharacter(abc.ABC):
         
     @property
     def basic_attack(self) -> Attack:
-        damage = Damage(physical= self.effective_stats.physical_power)
+        damage = Damage(physical=self.effective_stats.physical_power)
         description = (f"{self.name} performed a Basic Attack, "
-                        f"dealing {damage.physical} Physical Damage.")
-        return Attack(damage = damage, description = description)
+                       f"dealing {damage.physical} Physical Damage.")
+        return Attack(damage=damage, description=description)
     
     @property
     @abc.abstractmethod
