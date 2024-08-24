@@ -1,0 +1,92 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 213,
+                    "armor": 30,
+                    "magic_resistance": 45,
+                    "physical_power": 24,
+                    "magic_power": 4,
+                    "special_trigger_chance": 12
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 97,
+                    "armor": 5,
+                    "magic_resistance": 3,
+                    "physical_power": 24,
+                    "magic_power": 57,
+                    "special_trigger_chance": 65
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 300,
+                    "armor": 20,
+                    "magic_resistance": 49,
+                    "physical_power": 22,
+                    "magic_power": 0,
+                    "special_trigger_chance": 15
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 221,
+                    "armor": 30,
+                    "magic_resistance": 40,
+                    "physical_power": 20,
+                    "magic_power": 0,
+                    "special_trigger_chance": 14
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 276,
+                    "armor": 20,
+                    "magic_resistance": 42,
+                    "physical_power": 20,
+                    "magic_power": 2,
+                    "special_trigger_chance": 11
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "pole",
+            "stats": {
+                "physical_power": 7,
+                "magic_power": 11
+            }
+        },
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 6,
+                "magic_power": 32
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 25,
+                "magic_resistance": 33
+            }
+        }
+    ]
+}

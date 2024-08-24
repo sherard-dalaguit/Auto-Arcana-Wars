@@ -1,0 +1,91 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 79,
+                    "armor": 0,
+                    "magic_resistance": 0,
+                    "physical_power": 25,
+                    "magic_power": 52,
+                    "special_trigger_chance": 65
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 83,
+                    "armor": 0,
+                    "magic_resistance": 3,
+                    "physical_power": 19,
+                    "magic_power": 75,
+                    "special_trigger_chance": 62
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 77,
+                    "armor": 3,
+                    "magic_resistance": 0,
+                    "physical_power": 15,
+                    "magic_power": 62,
+                    "special_trigger_chance": 61
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 228,
+                    "armor": 30,
+                    "magic_resistance": 40,
+                    "physical_power": 27,
+                    "magic_power": 3,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 67,
+                    "armor": 7,
+                    "magic_resistance": 5,
+                    "physical_power": 40,
+                    "magic_power": 4,
+                    "special_trigger_chance": 12
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 10,
+                "magic_power": 1
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 59
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 29,
+                "magic_resistance": 35
+            }
+        }
+    ]
+}

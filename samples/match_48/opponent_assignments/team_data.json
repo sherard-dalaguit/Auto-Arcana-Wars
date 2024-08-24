@@ -1,0 +1,90 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 97,
+                    "armor": 1,
+                    "magic_resistance": 3,
+                    "physical_power": 17,
+                    "magic_power": 64,
+                    "special_trigger_chance": 61
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 249,
+                    "armor": 23,
+                    "magic_resistance": 48,
+                    "physical_power": 26,
+                    "magic_power": 2,
+                    "special_trigger_chance": 15
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 61,
+                    "armor": 7,
+                    "magic_resistance": 4,
+                    "physical_power": 60,
+                    "magic_power": 1,
+                    "special_trigger_chance": 12
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 52,
+                    "armor": 5,
+                    "magic_resistance": 5,
+                    "physical_power": 44,
+                    "magic_power": 3,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 55,
+                    "armor": 8,
+                    "magic_resistance": 3,
+                    "physical_power": 52,
+                    "magic_power": 3,
+                    "special_trigger_chance": 13
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 75
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 68
+            }
+        },
+        {
+            "name": "pole",
+            "stats": {
+                "physical_power": 5,
+                "magic_power": 10
+            }
+        }
+    ]
+}

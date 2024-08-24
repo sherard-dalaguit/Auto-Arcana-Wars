@@ -1,0 +1,92 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 89,
+                    "armor": 3,
+                    "magic_resistance": 5,
+                    "physical_power": 28,
+                    "magic_power": 75,
+                    "special_trigger_chance": 63
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 89,
+                    "armor": 3,
+                    "magic_resistance": 1,
+                    "physical_power": 15,
+                    "magic_power": 60,
+                    "special_trigger_chance": 51
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 300,
+                    "armor": 30,
+                    "magic_resistance": 50,
+                    "physical_power": 23,
+                    "magic_power": 5,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 50,
+                    "armor": 6,
+                    "magic_resistance": 0,
+                    "physical_power": 51,
+                    "magic_power": 3,
+                    "special_trigger_chance": 15
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 98,
+                    "armor": 5,
+                    "magic_resistance": 3,
+                    "physical_power": 22,
+                    "magic_power": 55,
+                    "special_trigger_chance": 50
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 3,
+                "magic_power": 33
+            }
+        },
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 5,
+                "magic_power": 0
+            }
+        },
+        {
+            "name": "pole",
+            "stats": {
+                "physical_power": 5,
+                "magic_power": 10
+            }
+        }
+    ]
+}

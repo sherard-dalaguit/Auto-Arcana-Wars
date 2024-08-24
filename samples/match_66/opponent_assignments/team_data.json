@@ -1,0 +1,90 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 77,
+                    "armor": 2,
+                    "magic_resistance": 2,
+                    "physical_power": 24,
+                    "magic_power": 75,
+                    "special_trigger_chance": 50
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 300,
+                    "armor": 26,
+                    "magic_resistance": 44,
+                    "physical_power": 20,
+                    "magic_power": 2,
+                    "special_trigger_chance": 18
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 203,
+                    "armor": 20,
+                    "magic_resistance": 40,
+                    "physical_power": 26,
+                    "magic_power": 3,
+                    "special_trigger_chance": 20
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 228,
+                    "armor": 28,
+                    "magic_resistance": 40,
+                    "physical_power": 24,
+                    "magic_power": 5,
+                    "special_trigger_chance": 14
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 68,
+                    "armor": 5,
+                    "magic_resistance": 0,
+                    "physical_power": 45,
+                    "magic_power": 0,
+                    "special_trigger_chance": 11
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 28,
+                "magic_resistance": 36
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 75
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 62
+            }
+        }
+    ]
+}

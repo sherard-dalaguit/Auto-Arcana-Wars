@@ -1,0 +1,92 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 212,
+                    "armor": 23,
+                    "magic_resistance": 45,
+                    "physical_power": 26,
+                    "magic_power": 2,
+                    "special_trigger_chance": 20
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 200,
+                    "armor": 24,
+                    "magic_resistance": 42,
+                    "physical_power": 28,
+                    "magic_power": 3,
+                    "special_trigger_chance": 18
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 88,
+                    "armor": 5,
+                    "magic_resistance": 4,
+                    "physical_power": 17,
+                    "magic_power": 62,
+                    "special_trigger_chance": 55
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 281,
+                    "armor": 29,
+                    "magic_resistance": 47,
+                    "physical_power": 24,
+                    "magic_power": 1,
+                    "special_trigger_chance": 20
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 99,
+                    "armor": 0,
+                    "magic_resistance": 3,
+                    "physical_power": 17,
+                    "magic_power": 58,
+                    "special_trigger_chance": 65
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 21,
+                "magic_resistance": 40
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 26,
+                "magic_resistance": 34
+            }
+        },
+        {
+            "name": "pole",
+            "stats": {
+                "physical_power": 7,
+                "magic_power": 13
+            }
+        }
+    ]
+}

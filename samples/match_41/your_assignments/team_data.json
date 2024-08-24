@@ -1,0 +1,92 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 71,
+                    "armor": 9,
+                    "magic_resistance": 2,
+                    "physical_power": 57,
+                    "magic_power": 0,
+                    "special_trigger_chance": 11
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 209,
+                    "armor": 26,
+                    "magic_resistance": 50,
+                    "physical_power": 25,
+                    "magic_power": 5,
+                    "special_trigger_chance": 15
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 58,
+                    "armor": 10,
+                    "magic_resistance": 4,
+                    "physical_power": 60,
+                    "magic_power": 5,
+                    "special_trigger_chance": 11
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 200,
+                    "armor": 26,
+                    "magic_resistance": 40,
+                    "physical_power": 20,
+                    "magic_power": 0,
+                    "special_trigger_chance": 12
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 60,
+                    "armor": 8,
+                    "magic_resistance": 5,
+                    "physical_power": 40,
+                    "magic_power": 2,
+                    "special_trigger_chance": 10
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 8,
+                "magic_power": 1
+            }
+        },
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 0,
+                "magic_power": 35
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 22,
+                "magic_resistance": 39
+            }
+        }
+    ]
+}

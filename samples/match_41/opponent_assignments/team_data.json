@@ -1,0 +1,91 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 84,
+                    "armor": 4,
+                    "magic_resistance": 0,
+                    "physical_power": 15,
+                    "magic_power": 59,
+                    "special_trigger_chance": 65
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 54,
+                    "armor": 6,
+                    "magic_resistance": 5,
+                    "physical_power": 50,
+                    "magic_power": 3,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 88,
+                    "armor": 4,
+                    "magic_resistance": 2,
+                    "physical_power": 28,
+                    "magic_power": 66,
+                    "special_trigger_chance": 64
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 72,
+                    "armor": 7,
+                    "magic_resistance": 4,
+                    "physical_power": 60,
+                    "magic_power": 3,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 90,
+                    "armor": 2,
+                    "magic_resistance": 5,
+                    "physical_power": 27,
+                    "magic_power": 50,
+                    "special_trigger_chance": 56
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 50
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 26,
+                "magic_resistance": 35
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 29,
+                "magic_resistance": 32
+            }
+        }
+    ]
+}

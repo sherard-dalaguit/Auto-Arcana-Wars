@@ -1,0 +1,92 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 62,
+                    "armor": 7,
+                    "magic_resistance": 5,
+                    "physical_power": 45,
+                    "magic_power": 1,
+                    "special_trigger_chance": 14
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 93,
+                    "armor": 0,
+                    "magic_resistance": 2,
+                    "physical_power": 15,
+                    "magic_power": 71,
+                    "special_trigger_chance": 52
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 55,
+                    "armor": 7,
+                    "magic_resistance": 0,
+                    "physical_power": 50,
+                    "magic_power": 4,
+                    "special_trigger_chance": 13
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 300,
+                    "armor": 25,
+                    "magic_resistance": 40,
+                    "physical_power": 25,
+                    "magic_power": 1,
+                    "special_trigger_chance": 19
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 239,
+                    "armor": 26,
+                    "magic_resistance": 40,
+                    "physical_power": 22,
+                    "magic_power": 3,
+                    "special_trigger_chance": 13
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 40,
+                "magic_resistance": 30
+            }
+        },
+        {
+            "name": "pole",
+            "stats": {
+                "physical_power": 3,
+                "magic_power": 20
+            }
+        },
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 8,
+                "magic_power": 0
+            }
+        }
+    ]
+}

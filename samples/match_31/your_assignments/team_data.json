@@ -1,0 +1,91 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 288,
+                    "armor": 28,
+                    "magic_resistance": 48,
+                    "physical_power": 28,
+                    "magic_power": 0,
+                    "special_trigger_chance": 13
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 279,
+                    "armor": 20,
+                    "magic_resistance": 50,
+                    "physical_power": 23,
+                    "magic_power": 2,
+                    "special_trigger_chance": 11
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 266,
+                    "armor": 22,
+                    "magic_resistance": 44,
+                    "physical_power": 20,
+                    "magic_power": 5,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 92,
+                    "armor": 3,
+                    "magic_resistance": 3,
+                    "physical_power": 16,
+                    "magic_power": 74,
+                    "special_trigger_chance": 64
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 89,
+                    "armor": 3,
+                    "magic_resistance": 2,
+                    "physical_power": 27,
+                    "magic_power": 54,
+                    "special_trigger_chance": 61
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 50
+            }
+        },
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 0,
+                "magic_power": 29
+            }
+        },
+        {
+            "name": "solid_rock",
+            "stats": {
+                "armor": 29,
+                "magic_resistance": 40
+            }
+        }
+    ]
+}

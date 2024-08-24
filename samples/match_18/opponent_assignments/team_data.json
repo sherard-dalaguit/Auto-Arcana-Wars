@@ -1,0 +1,91 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 91,
+                    "armor": 5,
+                    "magic_resistance": 5,
+                    "physical_power": 15,
+                    "magic_power": 75,
+                    "special_trigger_chance": 53
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 75,
+                    "armor": 0,
+                    "magic_resistance": 0,
+                    "physical_power": 22,
+                    "magic_power": 51,
+                    "special_trigger_chance": 50
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 85,
+                    "armor": 5,
+                    "magic_resistance": 1,
+                    "physical_power": 26,
+                    "magic_power": 63,
+                    "special_trigger_chance": 65
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 75,
+                    "armor": 5,
+                    "magic_resistance": 0,
+                    "physical_power": 19,
+                    "magic_power": 61,
+                    "special_trigger_chance": 65
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 217,
+                    "armor": 20,
+                    "magic_resistance": 50,
+                    "physical_power": 21,
+                    "magic_power": 2,
+                    "special_trigger_chance": 15
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 61
+            }
+        },
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 6,
+                "magic_power": 32
+            }
+        },
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 9,
+                "magic_power": 28
+            }
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 75,
+                    "armor": 2,
+                    "magic_resistance": 1,
+                    "physical_power": 19,
+                    "magic_power": 56,
+                    "special_trigger_chance": 59
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 256,
+                    "armor": 20,
+                    "magic_resistance": 44,
+                    "physical_power": 27,
+                    "magic_power": 5,
+                    "special_trigger_chance": 18
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 259,
+                    "armor": 20,
+                    "magic_resistance": 42,
+                    "physical_power": 29,
+                    "magic_power": 1,
+                    "special_trigger_chance": 19
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 300,
+                    "armor": 20,
+                    "magic_resistance": 47,
+                    "physical_power": 25,
+                    "magic_power": 5,
+                    "special_trigger_chance": 19
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 228,
+                    "armor": 27,
+                    "magic_resistance": 41,
+                    "physical_power": 24,
+                    "magic_power": 3,
+                    "special_trigger_chance": 16
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 6,
+                "magic_power": 0
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 59
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 53
+            }
+        }
+    ]
+}

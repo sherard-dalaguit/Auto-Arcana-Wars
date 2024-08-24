@@ -1,0 +1,91 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 75,
+                    "armor": 1,
+                    "magic_resistance": 1,
+                    "physical_power": 30,
+                    "magic_power": 53,
+                    "special_trigger_chance": 62
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 81,
+                    "armor": 3,
+                    "magic_resistance": 0,
+                    "physical_power": 15,
+                    "magic_power": 57,
+                    "special_trigger_chance": 50
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 61,
+                    "armor": 8,
+                    "magic_resistance": 3,
+                    "physical_power": 60,
+                    "magic_power": 5,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 79,
+                    "armor": 5,
+                    "magic_resistance": 2,
+                    "physical_power": 20,
+                    "magic_power": 74,
+                    "special_trigger_chance": 53
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 73,
+                    "armor": 7,
+                    "magic_resistance": 5,
+                    "physical_power": 49,
+                    "magic_power": 4,
+                    "special_trigger_chance": 15
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 2,
+                "magic_power": 28
+            }
+        },
+        {
+            "name": "shiny_staff",
+            "stats": {
+                "physical_power": 0,
+                "magic_power": 25
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 57
+            }
+        }
+    ]
+}

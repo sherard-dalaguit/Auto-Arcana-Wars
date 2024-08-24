@@ -1,0 +1,89 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 62,
+                    "armor": 8,
+                    "magic_resistance": 1,
+                    "physical_power": 41,
+                    "magic_power": 1,
+                    "special_trigger_chance": 14
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 86,
+                    "armor": 0,
+                    "magic_resistance": 3,
+                    "physical_power": 25,
+                    "magic_power": 64,
+                    "special_trigger_chance": 53
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 63,
+                    "armor": 7,
+                    "magic_resistance": 2,
+                    "physical_power": 49,
+                    "magic_power": 4,
+                    "special_trigger_chance": 15
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 100,
+                    "armor": 4,
+                    "magic_resistance": 2,
+                    "physical_power": 20,
+                    "magic_power": 60,
+                    "special_trigger_chance": 65
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 75,
+                    "armor": 3,
+                    "magic_resistance": 0,
+                    "physical_power": 22,
+                    "magic_power": 75,
+                    "special_trigger_chance": 52
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 75
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 75
+            }
+        },
+        {
+            "name": "magic_cauldron",
+            "stats": {
+                "hp": 68
+            }
+        }
+    ]
+}

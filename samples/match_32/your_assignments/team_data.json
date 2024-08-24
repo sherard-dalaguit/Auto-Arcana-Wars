@@ -1,0 +1,92 @@
+{
+    "characters": [
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 217,
+                    "armor": 24,
+                    "magic_resistance": 43,
+                    "physical_power": 27,
+                    "magic_power": 4,
+                    "special_trigger_chance": 10
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 98,
+                    "armor": 0,
+                    "magic_resistance": 3,
+                    "physical_power": 27,
+                    "magic_power": 55,
+                    "special_trigger_chance": 56
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "mage",
+                "stats": {
+                    "hp": 79,
+                    "armor": 4,
+                    "magic_resistance": 0,
+                    "physical_power": 16,
+                    "magic_power": 50,
+                    "special_trigger_chance": 59
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "warrior",
+                "stats": {
+                    "hp": 300,
+                    "armor": 30,
+                    "magic_resistance": 48,
+                    "physical_power": 26,
+                    "magic_power": 1,
+                    "special_trigger_chance": 20
+                }
+            }
+        },
+        {
+            "character": {
+                "name": "ninja",
+                "stats": {
+                    "hp": 69,
+                    "armor": 6,
+                    "magic_resistance": 0,
+                    "physical_power": 45,
+                    "magic_power": 5,
+                    "special_trigger_chance": 15
+                }
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 6,
+                "magic_power": 1
+            }
+        },
+        {
+            "name": "enchanted_sword",
+            "stats": {
+                "physical_power": 10,
+                "magic_power": 1
+            }
+        },
+        {
+            "name": "pole",
+            "stats": {
+                "physical_power": 6,
+                "magic_power": 10
+            }
+        }
+    ]
+}
