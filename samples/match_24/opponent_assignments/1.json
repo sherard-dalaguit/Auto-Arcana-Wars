@@ -1,0 +1,67 @@
+[
+    {
+        "character": {
+            "name": "warrior",
+            "stats": {
+                "hp": 204,
+                "armor": 29,
+                "magic_resistance": 50,
+                "physical_power": 28,
+                "magic_power": 3,
+                "special_trigger_chance": 16
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "warrior",
+            "stats": {
+                "hp": 211,
+                "armor": 26,
+                "magic_resistance": 41,
+                "physical_power": 25,
+                "magic_power": 2,
+                "special_trigger_chance": 12
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "ninja",
+            "stats": {
+                "hp": 70,
+                "armor": 5,
+                "magic_resistance": 3,
+                "physical_power": 40,
+                "magic_power": 5,
+                "special_trigger_chance": 15
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "mage",
+            "stats": {
+                "hp": 97,
+                "armor": 5,
+                "magic_resistance": 4,
+                "physical_power": 26,
+                "magic_power": 59,
+                "special_trigger_chance": 52
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "ninja",
+            "stats": {
+                "hp": 65,
+                "armor": 6,
+                "magic_resistance": 2,
+                "physical_power": 57,
+                "magic_power": 2,
+                "special_trigger_chance": 10
+            }
+        }
+    }
+]

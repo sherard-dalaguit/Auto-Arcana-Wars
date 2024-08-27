@@ -1,0 +1,89 @@
+[
+    {
+        "character": {
+            "name": "warrior",
+            "stats": {
+                "hp": 300,
+                "armor": 24,
+                "magic_resistance": 41,
+                "physical_power": 20,
+                "magic_power": 3,
+                "special_trigger_chance": 20
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "mage",
+            "stats": {
+                "hp": 88,
+                "armor": 0,
+                "magic_resistance": 5,
+                "physical_power": 15,
+                "magic_power": 51,
+                "special_trigger_chance": 50
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "mage",
+            "stats": {
+                "hp": 90,
+                "armor": 3,
+                "magic_resistance": 2,
+                "physical_power": 26,
+                "magic_power": 50,
+                "special_trigger_chance": 59
+            }
+        },
+        "items": [
+            {
+                "name": "solid_rock",
+                "stats": {
+                    "armor": 22,
+                    "magic_resistance": 38
+                }
+            },
+            {
+                "name": "enchanted_sword",
+                "stats": {
+                    "physical_power": 9,
+                    "magic_power": 1
+                }
+            },
+            {
+                "name": "magic_cauldron",
+                "stats": {
+                    "hp": 50
+                }
+            }
+        ]
+    },
+    {
+        "character": {
+            "name": "mage",
+            "stats": {
+                "hp": 93,
+                "armor": 5,
+                "magic_resistance": 3,
+                "physical_power": 30,
+                "magic_power": 62,
+                "special_trigger_chance": 64
+            }
+        }
+    },
+    {
+        "character": {
+            "name": "ninja",
+            "stats": {
+                "hp": 69,
+                "armor": 8,
+                "magic_resistance": 3,
+                "physical_power": 55,
+                "magic_power": 1,
+                "special_trigger_chance": 12
+            }
+        }
+    }
+]
