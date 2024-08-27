@@ -28,6 +28,28 @@ current_elo = {bot: DEFAULT_STARTING_ELO for bot in BOT_MAPPING}
 
 
 def calculate_elo(your_elo: int, opponent_elo: int, is_your_win: bool) -> list[int]:
+    """
+	Calculates the updated Elo ratings for you and your opponent based on the match outcome.
+
+	The Elo rating system is a method for calculating the relative skill levels of players in zero-sum games such as chess.
+	The outcome of the match (win or loss) is used to adjust the ratings. This function assumes that a draw is not possible.
+
+	Args:
+	  your_elo (int): Your current Elo rating.
+	  opponent_elo (int): Your opponent's current Elo rating.
+	  is_your_win (bool): A boolean that's True if you won the match and False if you lost.
+
+	Returns:
+	  list[int]: A two-element list where the first element is your updated Elo rating,
+				 and the second element is your opponent's updated Elo rating.
+
+	References:
+	  - https://en.wikipedia.org/wiki/Elo_rating_system
+
+	Notes:
+	  The constants used in this function (k-factor of 32 and a divisor of 400) are commonly used in chess,
+	  but they can be adjusted depending on the specifics of your games and player base.
+	"""
     k = 32
     s = 400
     your_expected_score = 1 / (1 + 10 ** ((opponent_elo - your_elo) / s))
