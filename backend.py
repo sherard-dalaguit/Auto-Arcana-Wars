@@ -24,6 +24,20 @@ def pretty_format_teams(your_team: list[BaseCharacter],
     
 
 def calculate_damage_taken(damage: Damage, character_stats: Stats) -> Stats:
+    """
+    Calculates the actual damage dealt to a character based on their stats
+    and the incoming damage.
+
+    Damage is reduced by the character's armor or magic resistance.
+
+    Args:
+        damage (Damage): The incoming damage, which can be physical and/or magical.
+        character_stats (Stats): The stats of the character getting hit.
+
+    Returns:
+        Stats: A Stats object where the current_hp attribute is set to
+        the negative of the actual damage dealt.
+    """
     hp_lost = 0
     hp_lost += (damage.physical - damage.physical * character_stats.armor / 100)
     hp_lost += (damage.magic - damage.magic * character_stats.magic_resistance / 100)
@@ -31,6 +45,21 @@ def calculate_damage_taken(damage: Damage, character_stats: Stats) -> Stats:
 
 
 def calculate_miss_chance(damage: Damage, character_stats: Stats) -> float:
+    """
+    Calculates the chance that an attack will miss based on the character's
+    stats and the type of incoming damage.
+
+    For physical damage, the miss chance is proportional to the character's armor / 10.
+    Similarly, for magical damage, it is proportional to the magic resistance / 10.
+    If there is no incoming damage, the miss chance is 0.
+
+    Args:
+        damage (Damage): The incoming damage, which can be physical or magical
+        character_stats (Stats): The stats of the character aiming to dodge the attack
+
+    Returns:
+        float: The calculated miss chance
+    """
     if damage.magic > damage.physical:
         miss_chance = character_stats.magic_resistance / 10
     else:

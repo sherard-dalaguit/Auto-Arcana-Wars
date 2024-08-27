@@ -19,6 +19,16 @@ ITEM_MAPPING = {
 
 
 def read_data(team_assignment: Path) -> list[BaseCharacter]:
+    """
+    Reads character and item data from a JSON file and creates respective
+    character and item instances. Each character has their own list of items.
+
+    Args:
+        team_assignment: Path to the JSON data file.
+
+    Returns:
+        A list of character instances.
+    """
     with open(team_assignment, "r") as f:
         read_assignment = json.load(f)
         
