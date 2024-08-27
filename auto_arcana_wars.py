@@ -19,7 +19,7 @@ BOT_MAPPING = {
     "mage_maxxer": partial(MaxxerBot, character_to_max="mage"),
     "ninja_maxxer": partial(MaxxerBot, character_to_max="ninja"),
     "head_on": HeadOnBot,
-    #  "your_bot": YourBot, # uncomment when implemented
+    "your_bot": YourBot, # uncomment when implemented
 }
 
 DEFAULT_STARTING_ELO = 1800

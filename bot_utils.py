@@ -6,6 +6,7 @@ from utils import BaseCharacter
 
 N_ROUNDS = 5
 
+
 class BaseBot(abc.ABC):
     
     def initialize(self, assignment_dir: Path) -> None:
@@ -81,5 +82,3 @@ class BaseBot(abc.ABC):
             opponent_team -- the opponent's team
         """
         raise NotImplementedError
-        
-
